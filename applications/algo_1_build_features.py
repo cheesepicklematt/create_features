@@ -1,3 +1,4 @@
+import pandas as pd
 import sys
 sys.path.insert(0,'./')
 from binance.client import Client
