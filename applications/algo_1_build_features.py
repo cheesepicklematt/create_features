@@ -51,6 +51,7 @@ def build(
         data = raw_data.copy(),
         ma_len=ma_len)
     data_features = bi.build(return_data=True,ret_col='Close')
+    data_features = data_features.merge(raw_data[['Open time', 'Open time formatted']],how='left',on='Open time')
 
     return data_features
 
