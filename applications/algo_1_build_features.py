@@ -24,15 +24,10 @@ def build(
 
     # extract raw data
     gd = getData()
-    gd.extract_data(
+    raw_data = gd.run(
         asset_list=asset_list,
         time_str = time_str,
         kline_interval = Client.KLINE_INTERVAL_15MINUTE
-    )
-    raw_data = gd.return_data(
-        convert_timestamp=True,
-        save_csv=False,
-        return_data=True
     )
     
     if not backtest:
