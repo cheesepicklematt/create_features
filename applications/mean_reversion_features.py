@@ -15,7 +15,7 @@ def build(asset_list,time_str):
     raw_data = gd.run(
         asset_list=asset_list,
         time_str = time_str,
-        kline_interval = Client.KLINE_INTERVAL_15MINUTE
+        kline_interval = Client.KLINE_INTERVAL_1MINUTE
     )
 
     return raw_data
